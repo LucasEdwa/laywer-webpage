@@ -14,12 +14,12 @@ export default function Navigation() {
 
     return (
         <div className="flex justify-between w-full absolute">
-            <div className="w-full flex flex-col text-white items-center">
+            <div className="w-full flex flex-col text-white items-left ml-24 p-5">
                 <div className="border-b-2 w-fit   p-2">
-                    <h1 className="text-center text-3xl">MIRELLA</h1>
+                    <h1 className="text-2xl">MIRELLA NUNES</h1>
 
                 </div>
-                <div className="text-center p-2 text-xs">
+                <div className="p-2 text-xs">
                     ADVOKATBYRÅ | GÖTEBORG
                 </div>
             </div>
