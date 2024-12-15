@@ -22,8 +22,8 @@ export default function Specializations() {
                         );
                     })}
                 </div>
-               <div className="flex justify-center  shadow-xl ">
-               <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-8 rounded-md ">
+               <div className="flex justify-center p-8  ">
+               <button className="bg-black hover:bg-gray-700 text-white shadow-xl font-bold py-2 px-8 rounded-md ">
                     LÄS MER
                 </button>
                </div>
