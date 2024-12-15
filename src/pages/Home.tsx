@@ -4,6 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import Modal from '../components/Modal';
+import Specializations from '../components/Specializations';
 library.add(faAngleDown);
 
 export default function Home() {
@@ -23,8 +24,10 @@ export default function Home() {
                 </div>
             </header>
             <Specialization />
-        </div>
             <Modal />
+            <Specializations />
+        </div>
+
         </>
     );
 }
