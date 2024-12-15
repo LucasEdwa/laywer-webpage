@@ -1,41 +1,18 @@
 import { useState, useEffect } from 'react';
-import familyIMG from '../images/family1.jpg';
-import socialIMG from '../images/family.avif';
-import migrationIMG from '../images/family.avif';
+import { SectionKey, sections } from '../models/ISections';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS first
+import '../index.css'; // Import Tailwind CSS after Bootstrap
 
-type SectionKey = 'family' | 'social' | 'migration';
 
-interface Section {
-    title: string;
-    description: string;
-    image: string;
-}
 
-const sections: Record<SectionKey, Section> = {
-    family: {
-        title: 'Familjerätt',
-        description: 'Vi hjälper dig med frågor som rör äktenskap, samboförhållanden, vårdnad, umgänge, underhåll och bodelning.',
-        image: familyIMG,
-    },
-    social: {
-        title: 'Socialrätt',
-        description: 'Vi företräder dig i tvister med socialtjänsten och andra myndigheter.',
-        image: socialIMG,
-    },
-    migration: {
-        title: 'Migrationsrätt',
-        description: 'Vi hjälper dig med frågor som rör uppehållstillstånd, medborgarskap och familjeåterförening.',
-        image: migrationIMG,
-    },
-};
 
 export default function Specialization() {
+    
     const [selectedSection, setSelectedSection] = useState<SectionKey>('family');
 
     useEffect(() => {
         const handleHashChange = () => {
             const hash = window.location.hash.replace('#', '') as SectionKey;
-            console.log('Hash changed:', hash); // Debugging log
             if (sections[hash]) {
                 setSelectedSection(hash);
             } else if (!hash) {
@@ -79,14 +56,14 @@ export default function Specialization() {
                             }}
                             className={`transition-opacity h-[58rem] duration-500 ease-in-out ${selectedSection === key ? 'opacity-100' : 'opacity-0'} ${selectedSection === key ? 'block' : 'hidden'} h-screen bg-cover bg-center`}
                         >
-                            <div className="bg-black bg-opacity-70 h-full flex items-center justify-center">
-                                <div className="text-white text-center flex flex-col items-center gap-7 p-6">
+                            <div className="bg-black/70  h-full flex items-center justify-center">
+                                <div className="text-white text-center flex flex-col items-center gap-7 p-6 w-full">
                                     <h2 className="text-4xl font-semibold ">{sections[key as SectionKey].title}</h2>
                                     <p>{sections[key as SectionKey].description}</p>
                                     <a href={`#${key}`} className="px-8 py-3 border w-1/4">LÄS MER</a>
                                     {sections[key as SectionKey].image && (
                                         <div className="flex gap-4 justify-center p-6">
-                                            <img src={sections[key as SectionKey].image} alt="" className="w-[29rem] h-[33rem] object-cover" />
+                                            <img src={sections[key as SectionKey].image} alt="" className="w-[29rem] h-[34rem] object-cover" />
                                         </div>
                                     )}
                                 </div>

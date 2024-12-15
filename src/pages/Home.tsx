@@ -1,11 +1,14 @@
-import Specialization from '../components/specialization';
+import Specialization from '../components/Specialization';
 import Hero from '../images/hero.jpeg';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import Modal from '../components/Modal';
 library.add(faAngleDown);
+
 export default function Home() {
     return (
+        <>
         <div className='w-full '>
             <header className="flex items-center flex-col ">
                 <img src={Hero} className='h-[22rem] cover w-full ' alt="" />
@@ -21,5 +24,7 @@ export default function Home() {
             </header>
             <Specialization />
         </div>
+            <Modal />
+        </>
     );
 }
