@@ -12,8 +12,10 @@ export default function Specializations() {
                     {Object.keys(sections).map((key) => {
                         const section = sections[key as SectionKey];
                         return (
-                            <div key={key} className=" text-center w-full">
-                                <img className="w-full h-[50rem] object-cover" src={section.image} alt={section.title} />
+                            <div key={key} className=" text-center w-full ">
+                                <div className="hover:bg-gray-700/60  ">
+                                    <img className="w-full h-[50rem] object-cover  " src={section.image} alt={section.title} />
+                                </div>
                                 <div className="px-6 py-4">
                                     <div className="font-bold text-xl mb-2">{section.title}</div>
                                     <p className="text-gray-700 text-base">{section.description}</p>
@@ -22,11 +24,11 @@ export default function Specializations() {
                         );
                     })}
                 </div>
-               <div className="flex justify-center p-8  ">
-               <button className="bg-black hover:bg-gray-700 text-white shadow-xl font-bold py-2 px-8 rounded-md ">
-                    LÄS MER
-                </button>
-               </div>
+                <div className="flex justify-center p-8  ">
+                    <button className="bg-black hover:bg-gray-700 text-white shadow-xl font-bold py-2 px-8 rounded-md ">
+                        LÄS MER
+                    </button>
+                </div>
             </section>
         </>
     );
