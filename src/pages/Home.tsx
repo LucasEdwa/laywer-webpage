@@ -6,6 +6,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import Modal from '../components/Modal';
 import Specializations from '../components/Specializations';
 import About from '../components/About';
+import ContactUs from '../components/ContactUs';
 library.add(faAngleDown);
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
             <Modal />
             <Specializations />
             <About />
+            <ContactUs />
         </div>
 
         </>
